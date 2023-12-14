@@ -1,0 +1,24 @@
+html {
+	background: white;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+main {
+	background: repeating-linear-gradient(45deg,
+			rgb(221,204,188),
+			rgb(221,204,188) 3px,
+			rgb(235,227,218) 3px,
+			rgb(235,227,218) 6px);
+	display: grid;
+	place-items: center;
+	height: 100%;
+}
