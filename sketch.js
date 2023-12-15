@@ -23,6 +23,10 @@ const isSpace = isCircle ? (random() < .8) : (random() < .2)
 const isPatchwork = random() < .2
 const withSpikes = isPatchwork ? false : random() < .2
 
+const obstacleType = isCircle ? 'circle' : choose(['circle', 'circle', 'circle', 'rect', 'rect', 'line'])
+const obstacleComp = random() < .2 ? 'top' : 'all'
+const wonkyObstacles = random() < .3
+
 const palletes = [['#d4e09b', '#f6f4d2', '#cbdfbd', '#f19c79'],
 ['#ffa69e', '#faf3dd', '#b8f2e6', '#aed9e0'],
 ['#219ebc', '#023047', '#ffb703', '#fb8500'],

@@ -1,7 +1,3 @@
-obstacleType = choose(['circle', 'circle', 'circle', 'rect', 'rect', 'line'])
-obstacleComp = random() < .2 ? 'top' : 'all'
-wonkyObstacles = random() < .3
-
 async function phase1() {
     poles = []
     poles = Array(sumPoles).fill(0).map(_ => {

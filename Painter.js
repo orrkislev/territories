@@ -2,7 +2,7 @@ function boublePainter(b) {
     this.clr = choose(bubblePallete)
     this.fillerType = choose(['points', 'lines', 'grid', 'dotgrid', 'fullShadow', 'fullLight'])
     if (random() > patternChance) this.fillerType = null
-    this.withSpots = random() < 0.2
+    this.withSpots = true//random() < 0.2
     this.withBubbles = random() < bubblyChance
     this.withX = random() < 0.2
 
@@ -93,11 +93,11 @@ function boublePainter(b) {
 
         if (this.withSpots) {
             let clr = color(this.clr)
-            colorMode(HSB, 360, 100, 100)
-            clr = color(hue(clr), saturation(clr) * 0.95, brightness(clr) * .95)
-            colorMode(RGB)
+
+            clr = color(red(clr) * .9, green(clr) * .9, blue(clr) * .9)
+
             fill(clr)
-            for (let i = 0; i < b.area / 30; i++) {
+            for (let i = 0; i < SCL(b.area) / 20; i++) {
                 const x = random(b.bounds.left, b.bounds.right)
                 const y = random(b.bounds.top, b.bounds.bottom)
                 c(x, y, SCL(random(8, 40)))
