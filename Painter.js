@@ -2,7 +2,7 @@ function boublePainter(b) {
     this.clr = choose(bubblePallete)
     this.fillerType = choose(['points', 'lines', 'grid', 'dotgrid', 'fullShadow', 'fullLight'])
     if (random() > patternChance) this.fillerType = null
-    this.withSpots = true//random() < 0.2
+    this.withSpots = random() < 0.2
     this.withBubbles = random() < bubblyChance
     this.withX = random() < 0.2
 
